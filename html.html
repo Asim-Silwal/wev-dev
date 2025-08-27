@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Color</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* Default for desktop */
+    body {
+      background-color: red;
+    }
+
+    /* For mobile (max width 768px) */
+    @media (max-width: 768px) {
+      body {
+        background-color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  Responsive Color Test
+</body>
+</html>

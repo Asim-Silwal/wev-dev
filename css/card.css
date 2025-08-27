@@ -18,6 +18,8 @@ body {
   border-radius: 20px; /* rounded corners */
   overflow: hidden; /* cut off anything outside card */
   box-shadow: 0 6px 20px rgba(170, 48, 48, 0.3); /* shadow under card */
+  background-color: red;
+
 }
 
 /* left side (text area) */
@@ -34,7 +36,6 @@ body {
 .card-info h2 {
   font-size: 28px;
 }
-
 /* role text (Student) */
 .card-info h3 {
   font-size: 22px;
@@ -44,5 +45,11 @@ body {
 .card-img {
   flex: 1.2; /* makes photo side a little bigger than text side */
   background: url("./470504535_440637405762111_5743990655058568146_n.jpg") no-repeat center center/cover; 
-  /* loads your photo, keeps it centered, and covers box */
 }
+
+
+  @media (max-width: 768px) {
+      .card {
+        background-color: blue;
+      }
+    }
