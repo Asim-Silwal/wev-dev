@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+}
+.asim {
+    font-size:30px;
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'poppins';
+    background-color: rgb(212, 228, 240);
+    background-size: cover ;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.asim-brown
+{
+    font-size: 18px;
+    color: brown;
+    font-weight: bold;
+    font-family: 'poppins'1;
+}
+.dhiraj {
+    font-size: 18px;
+    color: #ee312f;
+    font-weight: bold;
+    font-family: 'poppins';
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    border: 2px solid red;
+    line-height: 20px;
+}
+svg{
+    margin-bottom: 32px;
+    fill: #ee312f
+}
+svg path{
+    height: 100%;
+    width: 100%;
+}

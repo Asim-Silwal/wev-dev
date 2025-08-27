@@ -1,0 +1,188 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 20px;
+        }
+        
+        .id-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .id-card {
+            width: 350px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .id-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: #2575fc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .card-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .card-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            border: 3px solid #2575fc;
+            overflow: hidden;
+        }
+        
+        .profile-pic svg {
+            width: 60px;
+            height: 60px;
+            color: #2575fc;
+        }
+        
+        .student-info {
+            flex: 1;
+        }
+        
+        .student-info h2 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .student-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .details {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .detail-label {
+            width: 100px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .detail-value {
+            flex: 1;
+            color: #333;
+            font-size: 0.95rem;
+        }
+        
+        .barcode {
+            text-align: center;
+            padding: 15px 0;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        
+        .barcode svg {
+            width: 200px;
+            height: 50px;
+        }
+        
+        .card-footer {
+            background: #2575fc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.7rem;
+        }
+        
+        .instructions {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .instructions h2 {
+            color: #2575fc;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .instructions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .instructions li:before {
+            content: "•";
+            color: #2575fc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .id-card-container {
+                flex-direction: column;
+            }
+            
+            .instructions {
+                max-width: 350px;
+            }
+        }

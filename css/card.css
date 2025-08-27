@@ -1,0 +1,48 @@
+/* whole page background */
+body {
+  display: flex; /* puts content in the center */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* take full screen height */
+  margin: 0;
+  background: #f4f4f4; /* light gray background */
+}
+
+/* main card box */
+.card {
+  display: flex; /* places text on left + image on right */
+  width: 1000px; /* card width */
+  max-width: 95%; /* keep it smaller on small screens */
+  height: 400px; /* card height */
+  background: #ee1313; /* black background */
+  border-radius: 20px; /* rounded corners */
+  overflow: hidden; /* cut off anything outside card */
+  box-shadow: 0 6px 20px rgba(170, 48, 48, 0.3); /* shadow under card */
+}
+
+/* left side (text area) */
+.card-info {
+  flex: 1; /* takes equal space as image unless changed */
+  padding: 40px; /* space inside text box */
+  color: white; /* text color */
+  display: flex; 
+  flex-direction: column; /* stack text top to bottom */
+  justify-content: space-between; /* space text nicely */
+}
+
+/* bigger name text */
+.card-info h2 {
+  font-size: 28px;
+}
+
+/* role text (Student) */
+.card-info h3 {
+  font-size: 22px;
+}
+
+/* right side (image) */
+.card-img {
+  flex: 1.2; /* makes photo side a little bigger than text side */
+  background: url("./470504535_440637405762111_5743990655058568146_n.jpg") no-repeat center center/cover; 
+  /* loads your photo, keeps it centered, and covers box */
+}

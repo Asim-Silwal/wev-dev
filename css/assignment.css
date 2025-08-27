@@ -1,0 +1,40 @@
+.hello{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 20px;
+    width: 700px;
+    margin: auto;
+    margin-top: 200px;
+    font-family: poppins;
+}
+body{
+    background-color: rgb(184, 180, 180);
+}
+
+.box{
+    font-size: 30px;
+    color: #ee312f;
+    font-weight: bold;
+    font-family: 'times new roman';
+    text-align: right;
+    padding-right:50px;
+}
+.asim{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'times new roman';
+    background-size: cover ;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.yo{
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'times new roman';
+    text-align: right;
+    padding-right:50px;
+
+}
