@@ -1,0 +1,33 @@
+.wrapper{
+    font-weight: bold;
+}
+
+.top{
+    font-size: 40px;
+}
+
+.bottom{
+    font-size: 60px;
+}
+
+.para-text-blue{
+    color: blue;
+    text-decoration-color: blue;
+}
+
+.para-text-red{
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.para.text-blue{
+    font-size: 16px;
+    font-style: italic;
+    color: blue;
+}
+.para.text-red{
+    font-size: 16px;
+    font-style: italic;
+    color: red;
+}

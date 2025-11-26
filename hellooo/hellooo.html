@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Creator</title>
+    <link rel="stylesheet" href="hellooo.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <section class="inputBox" id="inputBox">
+        <h2>Create Student ID</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="stdName" placeholder="Enter full name">
+
+        <label>Student ID</label>
+        <input type="text" id="stdId" placeholder="Enter student ID">
+
+        <label>Department / Class</label>
+        <input type="text" id="stdDept" placeholder="Enter course or department">
+
+        <label>Upload Photo</label>
+        <input type="file" id="stdPhoto" accept="image/*">
+
+        <button id="createBtn">Generate Card</button>
+    </section>
+
+    <section class="idCard hidden" id="idCard">
+        <div class="cardBox">
+            <img id="photoPreview" src="" alt="student">
+            <h3>Student Identification Card</h3>
+
+            <div class="info">
+                <p><strong>Name:</strong> <span id="outName"></span></p>
+                <p><strong>ID:</strong> <span id="outId"></span></p>
+                <p><strong>Department:</strong> <span id="outDept"></span></p>
+            </div>
+
+            <button id="backBtn">Create Another</button>
+        </div>
+    </section>
+
+</div>
+
+<script src="hellooo.js"></script>
+</body>
+</html>
