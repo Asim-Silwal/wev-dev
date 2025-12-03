@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="./Hello.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>">
-</head>
-<body>
-    <h1>Introduction</h1>
-    <p> Hello my name is &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Asim Silwal-Designer </p>
-    <a href="https://www.facebook.com/asim.silwal.977509">Facebook Profile</a><br>
-    <a href="https://www.linkedin.com/feed/">Linkedin Profile</a><br>
-    <hr>
-    <img src="./470504535_440637405762111_5743990655058568146_n.jpg" alt="Asim Silwal" width="300" height="300">
-    <ul>
-        <li>Aap</li>
-    </ul>
-    <ol>
-        <li>Aap</li>
-    </ol>
-    <table border="1">
-        <ti>
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-        </ti>
-    </table>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link rel="stylesheet" href="./html.css">
+<h1 id="title">Hello World</h1>
+<button id ="btnRed">Red</button>
+<button id ="btnBlue">Blue</button>
+<button id ="btnGreen">Green</button>
+      <script>
+    const title = document.getElementById('title');
+    //title.classList.add('text-red');
+    const redBtn = document.getElementById('btnRed');
+    redBtn.addEventListener('click', () => {
+title.classList.add('text-red');
+    })
+
+    const blueBtn = document.getElementById('btnBlue');
+    blueBtn.addEventListener('click', () => {
+title.classList.add('text-blue');
+    })
+
+    const greenBtn = document.getElementById('btnGreen');
+    greenBtn.addEventListener('click', () => {
+title.classList.add('text-green');
+    })
+
+
+  </script>
 </body>
 </html>

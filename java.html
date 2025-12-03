@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Example</title>
+</head>
+<body>
+  <h2>JavaScript Array Example</h2>
+  <p id="output"></p>
+
+  <!-- ✅ Script is placed at the very end -->
+  <script>
+    // Wait until the whole page loads
+    window.onload = function() {
+      let animals = ['Lion', 'Tiger', 'Camel', 'Dog', 'Elephant'];
+
+      // show original
+      document.getElementById("output").innerHTML = "<b>Original Array:</b> " + animals.join(", ") + "<br>";
+
+      // pop() removes last element
+      let popped = animals.pop();
+      document.getElementById("output").innerHTML += "<b>After pop():</b> " + animals.join(", ") + "<br>(Removed: " + popped + ")<br>";
+
+      // shift() removes first element
+      let shifted = animals.shift();
+      document.getElementById("output").innerHTML += "<b>After shift():</b> " + animals.join(", ") + "<br>(Removed: " + shifted + ")<br>";
+
+      // unshift() adds element to start
+      animals.unshift("Monkey");
+      document.getElementById("output").innerHTML += "<b>After unshift('Monkey'):</b> " + animals.join(", ");
+    };
+  </script>
+</body>
+</html>

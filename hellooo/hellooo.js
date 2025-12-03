@@ -1,56 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
-    const formBox = document.getElementById("inputBox");
-    const cardBox = document.getElementById("idCard");
+// Sections
+const formSection = document.getElementById("formSection");
+const cardSection = document.getElementById("cardSection");
 
-    const nameField = document.getElementById("stdName");
-    const idField = document.getElementById("stdId");
-    const deptField = document.getElementById("stdDept");
-    const photoField = document.getElementById("stdPhoto");
+// Form Inputs
+const nameInput = document.getElementById("stdName");
+const roleInput = document.getElementById("stdRole");
+const emailInput = document.getElementById("stdEmail");
+const phoneInput = document.getElementById("stdPhone");
+const photoInput = document.getElementById("stdPhoto");
 
-    const outName = document.getElementById("outName");
-    const outId = document.getElementById("outId");
-    const outDept = document.getElementById("outDept");
-    const photoPreview = document.getElementById("photoPreview");
+// Output fields
+const outName = document.getElementById("outName");
+const outRole = document.getElementById("outRole");
+const outEmail = document.getElementById("outEmail");
+const outPhone = document.getElementById("outPhone");
+const photoBox = document.getElementById("photoBox");
 
-    let imgURL = "";
+// Button
+const createBtn = document.getElementById("createBtn");
 
-    // Preview photo immediately
-    photoField.addEventListener("change", (event) => {
-        const fileSelected = event.target.files[0];
-        if (fileSelected) {
-            imgURL = URL.createObjectURL(fileSelected);
-            photoPreview.src = imgURL;
-        }
-    });
+// Generate ID Card
+createBtn.addEventListener("click", () => {
 
-    // Generate ID card
-    document.getElementById("createBtn").addEventListener("click", () => {
-        
-        if (!nameField.value || !idField.value || !deptField.value || !imgURL) {
-            alert("All fields are required!");
-            return;
-        }
+  // Fill card details
+  outName.textContent = nameInput.value || "No Name";
+  outRole.textContent = roleInput.value || "Not Provided";
+  outEmail.textContent = emailInput.value || "Not Provided";
+  outPhone.textContent = phoneInput.value || "Not Provided";
 
-        outName.textContent = nameField.value;
-        outId.textContent = idField.value;
-        outDept.textContent = deptField.value;
+  // Load uploaded image
+  const file = photoInput.files[0];
+  if (file) {
+    const imgURL = URL.createObjectURL(file);
+    photoBox.style.backgroundImage = `url(${imgURL})`;
+  }
 
-        formBox.classList.add("hidden");
-        cardBox.classList.remove("hidden");
-    });
+  // Remove form completely
+  formSection.remove();
 
-    // Reset to create new
-    document.getElementById("backBtn").addEventListener("click", () => {
-        formBox.classList.remove("hidden");
-        cardBox.classList.add("hidden");
+  // Show card
+  cardSection.classList.remove("hidden");
 
-        nameField.value = "";
-        idField.value = "";
-        deptField.value = "";
-        photoField.value = "";
-        imgURL = "";
-        photoPreview.src = "";
-    });
-
+  // Remove "Create Another" button if exists
+  const backBtn = document.getElementById("backBtn");
+  if (backBtn) {
+    backBtn.remove();
+  }
 });

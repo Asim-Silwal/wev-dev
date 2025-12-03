@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/hola.css">
+    <script src="./jva.js"></script>
+</head>
+<body>
+<div class="wrapper"></div>
+
+<script>
+  // 1. Find the wrapper div on the page
+  const wrapper = document.querySelector('.wrapper');
+
+  // 2. Create a new div
+  const innerDiv = document.createElement('div');
+
+  // 3. Add class to the new div
+  innerDiv.className = 'inner';
+
+  // 4. Put text inside the new div
+  innerDiv.textContent = 'This is inner text';
+
+  // 5. Append (insert) innerDiv inside wrapper
+  wrapper.append(innerDiv);
+</script>
+
+</body>
+</html>

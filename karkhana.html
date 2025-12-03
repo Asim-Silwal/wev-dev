@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karkhana Education - Select Your Grade</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">KARKHANA</div>
+            <div class="subtitle">Choose Your Learning Adventure</div>
+            <div class="description">
+                Select your grade level and embark on an exciting educational journey.
+                Each grade offers carefully crafted content designed to enhance your learning experience.
+            </div>
+        </header>
+
+        <main class="grades-grid">
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-1/', '_blank')">
+                <div class="grade-icon">1</div>
+                <h2 class="grade-title">Grade 1</h2>
+                <p class="grade-description">Start your educational journey with foundational learning and fun activities.</p>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-2/', '_blank')">
+                <div class="grade-icon">2</div>
+                <h2 class="grade-title">Grade 2</h2>
+                <p class="grade-description">Build upon your foundation with engaging lessons and interactive content.</p>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-3/', '_blank')">
+                <div class="grade-icon">3</div>
+                <h2 class="grade-title">Grade 3</h2>
+                <p class="grade-description">Explore new concepts and develop critical thinking skills.</p>
+
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-4/', '_blank')">
+                <div class="grade-icon">4</div>
+                <h2 class="grade-title">Grade 4</h2>
+                <p class="grade-description">Advance your knowledge with challenging and rewarding coursework.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-5/', '_blank')">
+                <div class="grade-icon">5</div>
+                <h2 class="grade-title">Grade 5</h2>
+                <p class="grade-description">Master intermediate concepts and prepare for higher learning.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-6/', '_blank')">
+                <div class="grade-icon">6</div>
+                <h2 class="grade-title">Grade 6</h2>
+                <p class="grade-description">Transition to advanced topics with comprehensive learning materials.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-7/', '_blank')">
+                <div class="grade-icon">7</div>
+                <h2 class="grade-title">Grade 7</h2>
+                <p class="grade-description">Dive deeper into complex subjects and analytical thinking.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-8/', '_blank')">
+                <div class="grade-icon">8</div>
+                <h2 class="grade-title">Grade 8</h2>
+                <p class="grade-description">Strengthen your academic foundation with advanced coursework.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+
+            <div class="grade-card" onclick="window.open('https://karkhana.asia/grade-9/', '_blank')">
+                <div class="grade-icon">9</div>
+                <h2 class="grade-title">Grade 9</h2>
+                <p class="grade-description">Prepare for higher education with comprehensive study materials.</p>
+                <button class="click-button">
+                    <i class="fas fa-play"></i> Click Here
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">© 2025 Karkhana Education. Empowering minds, one grade at a time.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add click sound effect and smooth interactions
+        document.querySelectorAll('.grade-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Prevent button click from triggering card click
+        document.querySelectorAll('.click-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // The card's onclick will still trigger due to event bubbling being natural
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

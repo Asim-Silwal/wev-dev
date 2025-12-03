@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh; /* take full screen height */
   margin: 0;
-  background: #f4f4f4; /* light gray background */
+  background: #000000; /* light gray background */
 }
 
 /* main card box */
@@ -14,11 +14,11 @@ body {
   width: 1000px; /* card width */
   max-width: 95%; /* keep it smaller on small screens */
   height: 400px; /* card height */
-  background: #ee1313; /* black background */
+  background: #000; /* black background */
   border-radius: 20px; /* rounded corners */
   overflow: hidden; /* cut off anything outside card */
   box-shadow: 0 6px 20px rgba(170, 48, 48, 0.3); /* shadow under card */
-  background-color: red;
+  background-color: rgb(255, 255, 255);
 
 }
 
@@ -26,8 +26,8 @@ body {
 .card-info {
   flex: 1; /* takes equal space as image unless changed */
   padding: 40px; /* space inside text box */
-  color: white; /* text color */
-  display: flex; 
+  color: rgb(0, 0, 0); /* text color */
+  display: flex;
   flex-direction: column; /* stack text top to bottom */
   justify-content: space-between; /* space text nicely */
 }
@@ -50,6 +50,6 @@ body {
 
   @media (max-width: 768px) {
       .card {
-        background-color: blue;
+        background-color:rgb(125, 199, 115);
       }
     }

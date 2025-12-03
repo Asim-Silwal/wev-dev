@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student ID Creator</title>
-    <link rel="stylesheet" href="hellooo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="./hellooo.css">
 </head>
+
 <body>
 
-<div class="wrapper">
+  <!-- ================= FORM SECTION ================= -->
+  <section id="formSection" class="form-container">
+    <h2>Create Your ID Card</h2>
 
-    <section class="inputBox" id="inputBox">
-        <h2>Create Student ID</h2>
+    <label>Full Name</label>
+    <input type="text" id="stdName" placeholder="Enter full name">
 
-        <label>Full Name</label>
-        <input type="text" id="stdName" placeholder="Enter full name">
+    <label>Role / Position</label>
+    <input type="text" id="stdRole" placeholder="e.g. Student, Developer">
 
-        <label>Student ID</label>
-        <input type="text" id="stdId" placeholder="Enter student ID">
+    <label>Email</label>
+    <input type="email" id="stdEmail" placeholder="Enter email">
 
-        <label>Department / Class</label>
-        <input type="text" id="stdDept" placeholder="Enter course or department">
+    <label>Phone Number</label>
+    <input type="text" id="stdPhone" placeholder="Enter phone number">
 
-        <label>Upload Photo</label>
-        <input type="file" id="stdPhoto" accept="image/*">
+    <label>Upload Photo</label>
+    <input type="file" id="stdPhoto" accept="image/*">
 
-        <button id="createBtn">Generate Card</button>
-    </section>
+    <button id="createBtn">Generate ID Card</button>
+  </section>
 
-    <section class="idCard hidden" id="idCard">
-        <div class="cardBox">
-            <img id="photoPreview" src="" alt="student">
-            <h3>Student Identification Card</h3>
+  <!-- ================= ID CARD SECTION ================= -->
+  <section id="cardSection" class="hidden">
+    <div class="card">
+      <div class="card-info">
+        <h2 id="outName">Name Here</h2>
+        <h3 id="outRole">Role</h3>
+        <p>Email: <span id="outEmail"></span></p>
+        <p>Phone: <span id="outPhone"></span></p>
+      </div>
 
-            <div class="info">
-                <p><strong>Name:</strong> <span id="outName"></span></p>
-                <p><strong>ID:</strong> <span id="outId"></span></p>
-                <p><strong>Department:</strong> <span id="outDept"></span></p>
-            </div>
+      <div class="card-img" id="photoBox"></div>
+    </div>
 
-            <button id="backBtn">Create Another</button>
-        </div>
-    </section>
+  </section>
 
-</div>
-
-<script src="hellooo.js"></script>
+  <script src="./hellooo.js"></script>
 </body>
 </html>
